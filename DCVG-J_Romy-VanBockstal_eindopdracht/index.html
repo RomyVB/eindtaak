@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="icon" href="favicon/favicon.webp" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/sudoku.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1 class="title"> Web Scripting</h1>
+            <h2 class="h2"> Welkom bij mijn eindopdracht, los de raadsels op en ondervind jouw score! </p>
+            <!-- <h2 class="h2"> Welkom bij mijn eindopdracht, los de raadsels op en ontdek wie ik ben! </p> -->
+
+        </header>
+
+        <section class="raadsels" id="raadsel-1"> 
+            <h3 class="h3">Wat wilt de rebus zeggen?</h3>
+                <img src="assets/rebus.png" alt="rebus">
+                <img id="score-gif" src="assets/1/wachtende.gif">
+                <div>            
+                    <input type="text" class="oplossing" id="oplossing-1" placeholder="x x x">
+                    <button class="button" id="button-1">controle</button>
+                </div>
+        </section>
+
+        <section class="raadsels" id="raadsel-2">
+            <h3 class="h3">Zoek de 4 ontbrekende cijfers en ondervind of ze juist zijn</h3>
+            
+            <table class="sudoku__table">
+
+        <tbody><tr class="sudoku__table-row">
+                          <td class="sudoku__table-cell" data-cell-index="0">
+                                6
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="1">
+                                4
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="2">
+                                9
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="3">
+                                3
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="4">
+                                2
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="5">
+                                8
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="6">
+                                7
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="7">
+                                5
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="8">
+                                1
+                          </td>
+        </tr>
+        <tr class="sudoku__table-row">
+                          <td class="sudoku__table-cell" data-cell-index="9">
+                                8
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="10">
+                                7
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="11">
+                                5
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="12">
+                                9
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="13">
+                                4
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="14">
+                                1
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="15">
+                                6
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="16">
+                                3
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="17">
+                                2
+                          </td>
+        </tr>
+        <tr class="sudoku__table-row sudoku__table-row--separator">
+                          <td class="sudoku__table-cell" data-cell-index="18">
+                                3
+                          </td>
+            
+                          <td class="sudoku__table-cell removable-numbers" data-cell-index="19">
+                                2
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="20">
+                                1
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="21">
+                                7
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="22">
+                                6
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="23">
+                                5
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="24">
+                                9
+                          </td>
+            
+                          <td class="sudoku__table-cell removable-numbers" data-cell-index="25">
+                                4
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="26">
+                                8
+                          </td>
+        </tr>
+        <tr class="sudoku__table-row">
+                          <td class="sudoku__table-cell" data-cell-index="27">
+                                2
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="28">
+                                9
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="29">
+                                3
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="30">
+                                8
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="31">
+                                7
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="32">
+                                6
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="33">
+                                5
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="34">
+                                1
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="35">
+                                4
+                          </td>
+        </tr>
+        <tr class="sudoku__table-row">
+                          <td class="sudoku__table-cell" data-cell-index="36">
+                                7
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="37">
+                                8
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="38">
+                                6
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="39">
+                                5
+                          </td>
+            
+                          <td class="sudoku__table-cell removable-numbers" data-cell-index="40">
+                                1
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="41">
+                                4
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="42">
+                                3
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="43">
+                                2
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="44">
+                                9
+                          </td>
+        </tr>
+        <tr class="sudoku__table-row sudoku__table-row--separator">
+                          <td class="sudoku__table-cell" data-cell-index="45">
+                                5
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="46">
+                                1
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="47">
+                                4
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="48">
+                                2
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="49">
+                                9
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator " data-cell-index="50">
+                                3
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="51">
+                                8
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="52">
+                                7
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="53">
+                                6
+                          </td>
+        </tr>
+        <tr class="sudoku__table-row">
+                          <td class="sudoku__table-cell" data-cell-index="54">
+                                9
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="55">
+                                6
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="56">
+                                7
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="57">
+                                4
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="58">
+                                5
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="59">
+                                2
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="60">
+                                1
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="61">
+                                8
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="62">
+                                3
+                          </td>
+        </tr>
+        <tr class="sudoku__table-row">
+                          <td class="sudoku__table-cell" data-cell-index="63">
+                                4
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="64">
+                                5
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="65">
+                                8
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="66">
+                                1
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="67">
+                                3
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="68">
+                                9
+                          </td>
+            
+                          <td class="sudoku__table-cell removable-numbers" data-cell-index="69">
+                                2
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="70">
+                                6
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="71">
+                                7
+                          </td>
+        </tr>
+        <tr class="sudoku__table-row sudoku__table-row--separator">
+                          <td class="sudoku__table-cell" data-cell-index="72">
+                                1
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="73">
+                                3
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="74">
+                                2
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="75">
+                                6
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="76">
+                                8
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="77">
+                                7
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="78">
+                                4
+                          </td>
+            
+                          <td class="sudoku__table-cell" data-cell-index="79">
+                                9
+                          </td>
+            
+                          <td class="sudoku__table-cell sudoku__table-cell--separator" data-cell-index="80">
+                                5
+                          </td>
+        </tr>
+              </tbody></table>
+              
+            <div>     
+                <img id="score-gif2" src="assets/2/wachtende.gif" >       
+                <input type="number" class="oplossing" id="oplossing-2" placeholder="00.00">
+                <button class="button" id="button-2">controle</button>
+            </div>
+        </section>
+
+
+        <section class="raadsels" id="raadsel-3">
+            <h3 class="h3">Van welke hogeschool is dit het logo</h3>
+            <img src="assets/artevelde.png" alt="artevelde">
+            <img id="score-gif3" src="assets/3/wachtende.gif" >
+            <div>            
+                <input type="text" class="oplossing" id="oplossing-3" placeholder="xxx">
+                <button class="button" id="button-3">controle</button>
+            </div>
+            </section>
+
+
+        <section class="score" id="score">
+            <h3 class="h3">Score</h3>
+            <p><span id="score-1"></span> <span id="score-2"></span> <span id="score-3"></span></p>
+        </section>
+
+        <button id="reset-button" class="button">Reset</button>
+
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
